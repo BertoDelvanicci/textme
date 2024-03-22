@@ -1,82 +1,171 @@
+<html>
+<head>
+    <!--Add your title here-->
+    <title>SIGNVLS JOIN THE EXCLUSIVE INNER CIRCLE</title>
 
+     <!--This sets the color scheme and font style of the page-->
+    <style>
+    body {
+    background: linear-gradient(to bottom, #000000 50%, #101010 100%);
+    color: white;
+        }
 
-    <!--
-    * You can use callback method for success and fail submit form
-    * submitSuccess()
-    * submitFail()
-    -->
-    <div style="width: 100%; display: flex">
-      
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
-    <script src="https://unpkg.com/libphonenumber-js@1.9.50/bundle/libphonenumber-min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.16/js/intlTelInput-jquery.min.js" integrity="sha512-+xuLsxQN3JBrnBSAr/vOlUqZfQ0OwpqZfdbuiQVpzjd5Y85F8F2AyzP4YNVDrpR29EolzELxc62br5gWK51phQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.16/css/intlTelInput.css" integrity="sha512-gxWow8Mo6q6pLa1XH/CcH8JyiSDEtiwJV78E+D+QP0EVasFs8wKXq16G8CLD4CJ2SnonHr4Lm/yY2fSI2+cbmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.superphone.io/widgets/widget.css" />
-    <script src="https://cdn.superphone.io/widgets/widget.min.js"></script>
-  
-
-      <script type="text/javascript">
-        window.sp = {
-          widgetHash: 'EJYzV9',
-          type: 'page',
+    .page-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+     background-image: url("phonto.JPG");
+     background-repeat: no-repeat;
+     background-position: top center;
+     background-size: cover;
         }
         
-        // function formError(xhr, textStatus) {
-        //   // Custom code Form error
-        // }
-        // function formSuccess(result) {
-        //   // Custom code FOrm success
-        // }
-      </script>
+        *{
+	font-family: 'Oswald', sans-serif;
+        }    
 
-      <style>
-        @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;600&display=swap");
-      </style>
-
-      <style>
-        #superphone-input-wrapper .phone-input-wrapper {
-          flex: 1;
+    button#submitButton {
+    text-transform: uppercase;
+    margin: 15px 0px;
+    width: 100%;
+    color: white;
+    padding: 8px 45px;
+    font-size: 19px;
+    border: 1px solid white;
+    border-radius: 0px;
+    background: #101010;
         }
-        .phone-input-wrapper .iti__arrow {
-          border-top-color: rgba(255,255,255,1);
-          border-bottom-color: rgba(255,255,255,1);
+
+    button#submitButton:hover {
+    color: black;
+    background: white;
         }
-      </style>
-      <div id="superphone-widget-esential-wrapper" class="superphone-widget" style="font-family: Oswald;">
-        <form id="addContact" action="#" method="POST" autocomplete="false">
-          <div id="superphone-input-wrapper">
-            <div class="phone-input-wrapper">
-              <input
-                  style="color: rgba(255,255,255,1); background-color: rgba(142,136,136,0.35);"
-                  autocomplete="off"
-                  tabindex="4"
-                  type="tel"
-                  class="superphone-form-control"
-                  id="phone"
-                  name="mobile"
-                  placeholder="Mobile # (w/ country code)"
-              >
-            </div>
-            <div class="superphone-send-button">
-              <button style="background: rgba(0,0,0,1); color: #FFFFFF;font-family: Oswald" type="submit" id="submitButton">Send</button>
-            </div>
-          </div>
-          <div id="form-error-message" class="form-error">
-            <div>Something went wrong. Please check your mobile and try again.</div>
-          </div>
-          <div id="form-error-mobile" class="form-error">
-            Phone number is not valid.
-          </div>
-        </form>
-      </div>
-    </div>
 
-
+    span.country-name {
+    color: black;
+    padding: 5px;
+    font-size: 16px;
+        }
+      
+    input#phone {
+    letter-spacing: 1px;
+    color: white;
+    border: 0px;
+    border-bottom: 2px solid white;
+    background: black;
+    padding: 26px 46px;
+    font-size: 17px;
+    border-radius: 0px;
+    font-weight: 700;
+        }
+        
+    input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 38px;
+        }
     
+    .form-error {
+    padding-left: 12px;
+    display: none;
+    color: #D85959;
+        }
+    
+    .form-success {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 5px;
+    display: none;
+        }
+    
+    .parsley-required {
+    padding-top: 5px;
+    color: #D85959;
+        }
+    
+    .parsley-minlength {
+    padding-top: 5px;
+    color: #ffffff;
+        }
+    
+    .iti-flag {
+     background-image: url("https://superphone.io/f/assets/images/flags.png");
+        }
 
-    <!--
+    input#phone:focus {
+    box-shadow: 0px 0px 0px;
+        }
+        
+    .buto {
+    text-align: center;
+        }
+        
+    .form-success {
+    background: black;
+    color: white;
+    font-size: 19px;
+    width: 100%;
+    text-align: center;
+    margin-top: 61px;
+        }
+        
+    .form-error {
+    color: #ffffff;
+        }
+
+    </style>
+</head> 
+    
+    <!--This is the code for the actual page-->
+    <body>
+    <div class="page-center">
+    <div class="custom-form">
+        <div class="container">
+            <h1 class="text-center" style="font-weight: bold">BERTO DELVANICCI</h1>
+            <p class="text-center" style="font-size: 21px">PLEASE ENTER YOUR PHONE NUMBER<br>AND I WILL TEXT YOU RIGHT BACK:</p>
+            <form id="addContact" class="form-horizontal" style="min-width: 100%" method="POST" action="#" autocomplete="false" data-parsley-validate>
+                <div class="form-group">
+                    <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 col-lg-4 col-lg-offset-4">
+                        <input autocomplete="off" tabindex="4" type="tel" class="form-control" id="phone" name="mobile"
+                                placeholder="Mobile # (w/country code)" data-parsley-trigger="focusout"
+                                data-parsley-minlength="9" data-parsley-required>
+                    </div>
+                    <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 col-lg-4 col-lg-offset-4">
+                        <button type="submit" id="submitButton" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+    
+                <div class="form-group" style="padding-left: 12px">
+                    <div class="form-error container">
+                        <div class="buto">Something went wrong. Please check your mobile and try again.</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!--This is the text for the success page-->
+    <div class="form-success">
+            <h1>Just texted you - please check your messages.</h1>
+    </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+   
+
+<!--
     * You can use callback method for success and fail submit form
     * submitSuccess()
     * submitFail()
@@ -164,4 +253,3 @@
         </div>
     </div>
     </body>
-    
