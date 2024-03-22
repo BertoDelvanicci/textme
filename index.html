@@ -1,129 +1,21 @@
-<html>
-<head>
-    <!--Add your title here-->
-    <title>SIGNVLS JOIN THE EXCLUSIVE INNER CIRCLE</title>
-
-    <!--This sets the color scheme and font style of the page-->
-    <style>
-    body {
-    background: linear-gradient(to bottom, #000000 50%, #101010 100%);
-    color: white;
-        }
-
-    .page-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-     background-image: url("phonto.JPG");
-     background-repeat: no-repeat;
-     background-position: top center;
-     background-size: cover;
-        }
-        
-        *{
-	font-family: 'Oswald', sans-serif;
-        }    
-
-    button#submitButton {
-    text-transform: uppercase;
-    margin: 15px 0px;
-    width: 100%;
-    color: white;
-    padding: 8px 45px;
-    font-size: 19px;
-    border: 1px solid white;
-    border-radius: 0px;
-    background: #101010;
-        }
-
-    button#submitButton:hover {
-    color: black;
-    background: white;
-        }
-
-    span.country-name {
-    color: black;
-    padding: 5px;
-    font-size: 16px;
-        }
-      
-    input#phone {
-    letter-spacing: 1px;
-    color: white;
-    border: 0px;
-    border-bottom: 2px solid white;
-    background: black;
-    padding: 26px 46px;
-    font-size: 17px;
-    border-radius: 0px;
-    font-weight: 700;
-        }
-        
-    input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    height: 38px;
-        }
-    
-    .form-error {
-    padding-left: 12px;
-    display: none;
-    color: #D85959;
-        }
-    
-    .form-success {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 5px;
-    display: none;
-        }
-    
-    .parsley-required {
-    padding-top: 5px;
-    color: #D85959;
-        }
-    
-    .parsley-minlength {
-    padding-top: 5px;
-    color: #ffffff;
-        }
-    
-    .iti-flag {
-     background-image: url("https://superphone.io/f/assets/images/flags.png");
-        }
-
-    input#phone:focus {
-    box-shadow: 0px 0px 0px;
-        }
-        
-    .buto {
-    text-align: center;
-        }
-        
-    .form-success {
-    background: black;
-    color: white;
-    font-size: 19px;
-    width: 100%;
-    text-align: center;
-    margin-top: 61px;
-        }
-
-        
-
-    <!--
+<!--
     * You can use callback method for success and fail submit form
     * submitSuccess()
     * submitFail()
     -->
-    <div style="width: 100%; display: flex">
-      
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing widget</title>
+
+        <style>
+          @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;600&display=swap");
+        </style>
+
+        
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
     <script src="https://unpkg.com/libphonenumber-js@1.9.50/bundle/libphonenumber-min.js"></script>
@@ -133,60 +25,64 @@
     <link rel="stylesheet" href="https://cdn.superphone.io/widgets/widget.css" />
     <script src="https://cdn.superphone.io/widgets/widget.min.js"></script>
   
+        <script type="text/javascript">
+          window.sp = {
+            widgetHash: 'EJYzV9',
+            type: 'page',
+          }
+          
+          // function formError(xhr, textStatus) {
+          //   // Custom code Form error
+          // }
+          // function formSuccess(result) {
+          //   // Custom code FOrm success
+          // }
+        </script>
 
-      <script type="text/javascript">
-        window.sp = {
-          widgetHash: 'EJYzV9',
-          type: 'page',
-        }
-        
-        // function formError(xhr, textStatus) {
-        //   // Custom code Form error
-        // }
-        // function formSuccess(result) {
-        //   // Custom code FOrm success
-        // }
-      </script>
+        <style>
+          body {
+            margin: 0;
+          }
 
-      <style>
-        @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;600&display=swap");
-      </style>
-
-      <style>
-        #superphone-input-wrapper .phone-input-wrapper {
-          flex: 1;
-        }
-        .phone-input-wrapper .iti__arrow {
-          border-top-color: rgba(255,255,255,1);
-          border-bottom-color: rgba(255,255,255,1);
-        }
-      </style>
-      <div id="superphone-widget-esential-wrapper" class="superphone-widget" style="font-family: Oswald;">
-        <form id="addContact" action="#" method="POST" autocomplete="false">
-          <div id="superphone-input-wrapper">
-            <div class="phone-input-wrapper">
-              <input
-                  style="color: rgba(255,255,255,1); background-color: rgba(142,136,136,0.35);"
-                  autocomplete="off"
-                  tabindex="4"
-                  type="tel"
-                  class="superphone-form-control"
-                  id="phone"
-                  name="mobile"
-                  placeholder="Mobile # (w/ country code)"
-              >
-            </div>
-            <div class="superphone-send-button">
-              <button style="background: rgba(0,0,0,1); color: #FFFFFF;font-family: Oswald" type="submit" id="submitButton">Send</button>
-            </div>
+          html,
+          body {
+            height: 100%;
+            width: 100%;
+          }
+        </style>
+    </head>
+    <body>
+      <div id="superphone-widget-page" style="background-size:cover;background-repeat:no-repeat;background-image:url(https://cdn.filestackcontent.com/oxecfhbkSTeJccdF1a1y);background-color:rgba(142,136,136,0.35);font-family:Oswald;">
+        <div id="superphone-widget-wrapper">
+          <div id="superphone-widget-landing-wrapper" class="superphone-widget widget-landing" style="background-color: transparent;">
+            <div id="superphone-widget-title" style="color: rgba(255,255,255,1)">Berto Delvanicci</div>
+            <div id="superphone-widget-description" style="color: rgba(255,255,255,1)">PLEASE ENTER YOUR PHONE NUMBER BELOW AND I WILL SHOOT YOU A TEXT RIGHT BACK:</div>
+            <form id="addContact" action="#" method="POST" autocomplete="false">
+              <div id="superphone-input-wrapper">
+                <div class="phone-input-wrapper">
+                  <input
+                      style="color:rgba(255,255,255,1);background-color:rgba(142,136,136,0.35)"
+                      autocomplete="off"
+                      tabindex="4"
+                      type="tel"
+                      class="superphone-form-control"
+                      id="phone"
+                      name="mobile"
+                      placeholder="Mobile # (w/ country code)"
+                  >
+                </div>
+                <div class="superphone-send-button">
+                  <button style="background: rgba(0,0,0,1); color: #FFFFFF;font-family: Oswald" type="submit" id="submitButton">Send</button>
+                </div>
+              </div>
+              <div id="form-error-message" class="form-error">
+                <div>Something went wrong. Please check your mobile and try again.</div>
+              </div>
+              <div id="form-error-mobile" class="form-error">
+                Phone number is not valid.
+              </div>
+            </form>
           </div>
-          <div id="form-error-message" class="form-error">
-            <div>Something went wrong. Please check your mobile and try again.</div>
-          </div>
-          <div id="form-error-mobile" class="form-error">
-            Phone number is not valid.
-          </div>
-        </form>
-      </div>
+        </div>
     </div>
-    
+    </body>
