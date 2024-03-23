@@ -85,9 +85,17 @@
                         console.log(result);
                         $('.custom-form').hide();
                         $('.form-success').show();
-      
+                    },
+                    error: function (xhr, resp, text) {
+                        $('.form-error').show();
+                        $('#submitButton').prop('disabled', false);
+                    }
+                });
+            });
+        });
+        </script>
   
-         <script type="text/javascript">
+        <script type="text/javascript">
           window.sp = {
             widgetHash: 'EJYzV9',
             type: 'page',
@@ -153,4 +161,5 @@
     </div>
     </body>
         
+    
     
