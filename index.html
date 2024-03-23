@@ -6,7 +6,16 @@
     <!--This code makes the website responsive-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-44234025-3"></script>
+	<script>
+ 	 window.dataLayer = window.dataLayer || [];
+ 	 function gtag(){dataLayer.push(arguments);}
+  	 gtag('js', new Date());
+  	 gtag('config', 'UA-44234025-3');
+	</script>
+	
+  
     <!--This is the javascript for the page-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.7/parsley.js"></script>
@@ -24,10 +33,6 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.16/css/intlTelInput.css" integrity="sha512-gxWow8Mo6q6pLa1XH/CcH8JyiSDEtiwJV78E+D+QP0EVasFs8wKXq16G8CLD4CJ2SnonHr4Lm/yY2fSI2+cbmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.superphone.io/widgets/widget.css" />
-    <script src="https://cdn.superphone.io/widgets/widget.min.js"></script>
-	
     <!--This is the actual function that calls the form widget-->
     <script type="text/javascript">
         $(document).ready(function () {
@@ -80,13 +85,13 @@
         });
     </script>
 
-    
     <!--This sets the color scheme and font style of the page-->
     <style>
     body {
     background: linear-gradient(to bottom, #000000 50%, #101010 100%);
     color: white;
         }
+
     .page-center {
     display: flex;
     align-items: center;
@@ -101,6 +106,7 @@
         *{
 	font-family: 'Oswald', sans-serif;
         }
+
     button#submitButton {
     text-transform: uppercase;
     margin: 15px 0px;
@@ -112,10 +118,12 @@
     border-radius: 0px;
     background: #101010;
         }
+
     button#submitButton:hover {
     color: black;
     background: white;
         }
+
     span.country-name {
     color: black;
     padding: 5px;
