@@ -7,34 +7,27 @@
 
     <!--This code makes the website responsive-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-44234025-3"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'UA-44234025-3');
     </script>
-
 
     <!--This is the javascript for the page-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.7/parsley.js"></script>
     <script src="https://superphone.io/f/assets/javascripts/intlTelInput.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
-        </script>
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 
     <!--This is the favicon for the browser tab-->
     <link rel="shortcut icon"
         href="https://github.com/BertoDelvanicci/textme/blob/bff3ea3fd22fe4fd78856ad39d46751c6a9db381/phonto.JPG"
         type="image/x-icon">
-
-
     <!--These are the stylesheets for the page-->
     <link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
     <link rel="stylesheet" href="https://superphone.io/f/assets/stylesheets/intlTelInput.css">
@@ -43,8 +36,30 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
+
+    <!--
+    * You can use callback method for success and fail submit form
+    * submitSuccess()
+    * submitFail()
+    -->
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <script src="https://unpkg.com/libphonenumber-js@1.9.50/bundle/libphonenumber-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.16/js/intlTelInput-jquery.min.js"
+        integrity="sha512-+xuLsxQN3JBrnBSAr/vOlUqZfQ0OwpqZfdbuiQVpzjd5Y85F8F2AyzP4YNVDrpR29EolzELxc62br5gWK51phQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.16/css/intlTelInput.css"
+        integrity="sha512-gxWow8Mo6q6pLa1XH/CcH8JyiSDEtiwJV78E+D+QP0EVasFs8wKXq16G8CLD4CJ2SnonHr4Lm/yY2fSI2+cbmw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.superphone.io/widgets/widget.css" />
+    <script src="https://cdn.superphone.io/widgets/widget.min.js"></script>
+
     <!--This is the actual function that calls the form widget-->
-    <script>
+    <script type="text/javascript">
         $(document).ready(function () {
 
             // Set up phone widget
@@ -71,7 +86,7 @@
 
                 // Send post to API
                 $.ajax({
-                    url: 'https://signvls.superphone.io/f/ArDkUXRO', // Url where to submit the request
+                    url: 'file:///Users/bertodelvanicci/Downloads/index-3.html', // Url where to submit the request
                     type: "POST",
                     beforeSend: function (request) {
                         request.setRequestHeader("Access-Control-Allow-Origin", "*");
@@ -80,21 +95,21 @@
                     contentType: 'application/json',
                     data: JSON.stringify(requestData),
                     success: function (result) {
-
+                        // You can see the result from the console
+                        // tab of the developer tools
                         console.log(result);
                         $('.custom-form').hide();
                         $('.form-success').show();
                     },
                     error: function (xhr, resp, text) {
-                        $('.custom-form').hide();
-                        $('.form-success').show();
-                        // $('.form-error').show();
-                        // $('#submitButton').prop('disabled', false);
+                        $('.form-error').show();
+                        $('#submitButton').prop('disabled', false);
                     }
                 });
             });
         });
     </script>
+
     <!--This sets the color scheme and font style of the page-->
     <style>
         body {
@@ -115,6 +130,13 @@
 
         * {
             font-family: 'Oswald', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .iti-flag {
+            background-image: url("https://superphone.io/f/assets/images/flags.png");
         }
 
         button#submitButton {
@@ -122,11 +144,15 @@
             margin: 15px 0px;
             width: 100%;
             color: white;
-            padding: 8px 45px;
             font-size: 19px;
             border: 1px solid white;
             border-radius: 0px;
             background: #101010;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 0px;
+            font-weight: 400;
         }
 
         button#submitButton:hover {
@@ -186,9 +212,6 @@
             color: #ffffff;
         }
 
-        .iti-flag {
-            background-image: url("https://superphone.io/f/assets/images/flags.png");
-        }
 
         input#phone:focus {
             box-shadow: 0px 0px 0px;
@@ -213,34 +236,22 @@
         .form-error {
             color: #ffffff;
         }
+
+        .iti {
+            position: relative;
+            display: flex !important;
+        }
     </style>
-</head>
 
-<script type="text/javascript">
-    window.sp = {
-        widgetHash: 'EJYzV9',
-        type: 'page',
-    };
+    <script type="text/javascript">
+        window.sp = {
+            widgetHash: 'EJYzV9',
+            type: 'page',
+        };
 
-    // function formError(xhr, textStatus) {
-    //   // Custom code Form error
-    // }
-    // function formSuccess(result) {
-    //   // Custom code FOrm success
-    // }
-</script>
+    </script>
 
-<style>
-    body {
-        margin: 0;
-    }
 
-    html,
-    body {
-        height: 100%;
-        width: 100%;
-    }
-</style>
 </head>
 
 <!--This is the code for the actual page-->
@@ -251,7 +262,7 @@
             <div class="container">
                 <h1 class="text-center" style="font-weight: bold">BERTO DELVANICCI</h1>
                 <p class="text-center" style="font-size: 21px">PLEASE ENTER YOUR PHONE NUMBER<br>AND I WILL TEXT YOU
-                    RIGHT BACK</p>
+                    RIGHT BACK:</p>
                 <form id="addContact" class="form-horizontal" style="min-width: 100%" method="POST" action="#"
                     autocomplete="false" data-parsley-validate>
                     <div class="form-group">
@@ -267,10 +278,9 @@
                         </div>
                     </div>
 
-
                     <div class="form-group" style="padding-left: 12px">
                         <div class="form-error container">
-                            <div class="buto">SUCCESSFUL just texted you check your messages.</div>
+                            <div class="buto">SUCCESSFUL.</div>
                         </div>
                     </div>
                 </form>
@@ -279,7 +289,7 @@
 
         <!--This is the text for the success page-->
         <div class="form-success">
-            <h1>Just texted you - check your messages.</h1>
+            <h1>Just texted you - please check your messages.</h1>
         </div>
     </div>
 </body>
