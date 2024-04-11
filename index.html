@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="https://superphone.io/f/assets/stylesheets/intlTelInput.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
@@ -42,10 +43,6 @@
     * submitSuccess()
     * submitFail()
     -->
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
     <script src="https://unpkg.com/libphonenumber-js@1.9.50/bundle/libphonenumber-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.16/js/intlTelInput-jquery.min.js"
@@ -68,7 +65,8 @@
                 numberType: "MOBILE",
                 nationalMode: false,
                 autoFormat: true,
-                autoPlaceholder: true
+                autoPlaceholder: true,
+
             });
 
             // Click on button send
@@ -137,6 +135,10 @@
 
         .iti-flag {
             background-image: url("https://superphone.io/f/assets/images/flags.png");
+        }
+
+        .grecaptcha-badge {
+            display: none !important;
         }
 
         button#submitButton {
@@ -223,14 +225,14 @@
 
         .form-success {
             border-radius: 5px;
-            padding: 5px;
+            padding: 15px;
             display: none;
             background: #00000020;
             color: white;
             font-size: 19px;
             width: 100%;
             text-align: center;
-            margin-top: 61px;
+            margin-bottom: 161px;
         }
 
         .form-error {
@@ -240,6 +242,12 @@
         .iti {
             position: relative;
             display: flex !important;
+        }
+
+        @media screen and (max-width: 508px) {
+            .page-center {
+                height: 75vh;
+            }
         }
     </style>
 
